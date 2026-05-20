@@ -1,0 +1,32 @@
+stream:
+  pace: 0.0
+  fps: 2.0
+
+short_memory:
+  buffer_frames_limit: 32
+  now_window_frames_limit: 16
+  buffer_fps: 1.0
+
+event_node:
+  max_frames_per_node: 16
+  tokens_per_frame: 256
+
+event_forest:
+  root_cnt_limit: 4
+  rag_event_retrieve_limit: 2
+  rag_qa_retrieve_limit: 1
+
+asr:
+  backend: none
+  sample_rate: 16000
+  chunk_seconds: 2.0
+
+mllm:
+  model_path: models/Qwen3-VL-8B-Instruct
+  max_new_tokens: 1024
+  do_sample: true
+  temperature: 0.1
+  top_p: 0.001
+
+embedding_model:
+  model_path: models/Qwen3-Embedding-0.6B
